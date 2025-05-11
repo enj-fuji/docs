@@ -1,0 +1,61 @@
+/* Justificar aonde for adequado */
+.doc .paragraph,
+.doc .ulist,
+.doc .olist,
+.doc .admonitionblock .content {
+  text-align: justify;
+}
+
+/* Parágrafo principal */
+.doc .paragraph.lead {
+  font-size: 110%;
+}
+.doc .paragraph.lead > p::first-letter {
+  font-size: 120%;
+  font-weight: 600;
+}
+
+/* Table Stripes */
+.doc table.stripes-even tbody tr:nth-child(even) {
+  background: #ededed;
+}
+
+.doc table.stripes-odd tbody tr:nth-child(odd) {
+  background: #ededed;
+}
+
+.doc table.stripes-hover tbody tr:hover {
+  background: #ededed;
+}
+
+/* Highlight */
+.doc mark {
+  border-radius: 8px;
+  padding-left: 8px;
+  padding-right: 8px;
+  background-color: #dcda49;
+}
+
+.doc div.ulist.sparkles > ul.none > li::marker {
+  content: '✨ ';
+}
+
+.doc div.ulist.lipstick > ul.none > li::marker {
+  content: '💄 ';
+}
+
+.doc div.ulist.bug > ul.none > li::marker {
+  content: '🐛 ';
+}
+
+.doc div.ulist.wrench > ul.none > li::marker {
+  content: '🔧 ';
+}
+
+.doc div.ulist.recycle > ul.none > li::marker {
+  content: '♻️ ';
+}
+
+.doc div.ulist.continue {
+  margin-top: 0.5rem;
+}

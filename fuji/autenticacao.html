@@ -1,0 +1,647 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <title>Novo servidor de autenticação :: Portal de Documentação da ENJ</title>
+    <link rel="canonical" href="https://docs.fuji.net.br/fuji/autenticacao.html">
+    <link rel="prev" href="pix.html">
+    <link rel="next" href="referencias-desenvolvimento.html">
+    <meta name="generator" content="Antora 3.1.2">
+    <link rel="stylesheet" href="../_/css/site.css">
+    <link rel="stylesheet" href="../_/css/fuji.css">
+    <link rel="stylesheet" href="../_/css/font-awesome5.min.css">
+    <link rel="stylesheet" href="../_/css/font-awesome5-v4-shims.min.css">
+  </head>
+  <body class="article">
+<header class="header">
+  <nav class="navbar">
+    <div class="navbar-brand">
+      <a class="navbar-item" href="https://docs.fuji.net.br">Portal de Documentação da ENJ</a>
+      <div class="navbar-item search hide-for-print">
+        <div id="search-field" class="field">
+          <input id="search-input" type="text" placeholder="Search the docs">
+        </div>
+      </div>
+      <button class="navbar-burger" aria-controls="topbar-nav" aria-expanded="false" aria-label="Toggle main menu">
+        <span></span>
+        <span></span>
+        <span></span>
+      </button>
+    </div>
+    <div id="topbar-nav" class="navbar-menu">
+      <div class="navbar-end">
+        <a class="navbar-item" href="#">Home</a>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Products</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Product A</a>
+            <a class="navbar-item" href="#">Product B</a>
+            <a class="navbar-item" href="#">Product C</a>
+          </div>
+        </div>
+        <div class="navbar-item has-dropdown is-hoverable">
+          <a class="navbar-link" href="#">Services</a>
+          <div class="navbar-dropdown">
+            <a class="navbar-item" href="#">Service A</a>
+            <a class="navbar-item" href="#">Service B</a>
+            <a class="navbar-item" href="#">Service C</a>
+          </div>
+        </div>
+        <div class="navbar-item">
+          <span class="control">
+            <a class="button is-primary" href="#">Download</a>
+          </span>
+        </div>
+      </div>
+    </div>
+  </nav>
+</header>
+<div class="body">
+<div class="nav-container" data-component="fuji" data-version="master">
+  <aside class="nav">
+    <div class="panels">
+<div class="nav-panel-menu is-active" data-panel="menu">
+  <nav class="nav-menu">
+    <button class="nav-menu-toggle" aria-label="Toggle expand/collapse all" style="display: none"></button>
+    <h3 class="title"><a href="index.html">Documentação do FUJI</a></h3>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Implementações</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="seguranca.html">Segurança</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="vencimento.html">Vencimento da Matrícula</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="plataforma.html">Análise da performance da Amazon × Linode</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="planos.html">Rascunho do Plano para os Alunos</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="titulos-geracao.html">Geração de Títulos</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="importacao.html">Layout para importação de alunos</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="importacao-graduacao.html">Layout para importação de graduações</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="funcionalidades.html">Funcionalidades</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="multiplas-graduacoes.html">Múltiplas Graduações</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="apenas-atividades-em-uso.html">Dashboard do Gestor apenas com Atividade em Uso</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="cancelamento-titulo.html">Cancelamento de título</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Em estudo ou desenvolvimento</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="pix.html">PIX</a>
+  </li>
+  <li class="nav-item is-current-page" data-depth="1">
+    <a class="nav-link" href="autenticacao.html">Novo servidor de autenticação</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="referencias-desenvolvimento.html">Referências de Desenvolvimento</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="treinos-graduacoes.html">Treinos × Graduações</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="versao-4.html">Versão 4.x</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <a class="nav-link" href="exames/index.html">Exames</a>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="exames/treinos.html">Cálculo de treinos para exames</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="exames/state-machine-inscricao.html">Estados de uma Inscrição</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="exames/exclusao.html">Exclusão de exame</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Notas de Atualização de Versão</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="releases/2.1.html">Versão 2.1</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="releases/2.9.html">Versão 2.9</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="releases/2.10.html">Versão 2.10</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="releases/3.html">Versão 3</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+    <button class="nav-item-toggle"></button>
+    <span class="nav-text">Relatórios de atividades</span>
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="reports/2023-05.html">Maio/2023</a>
+  </li>
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="reports/2023-06.html">Junho/2023</a>
+  </li>
+</ul>
+  </li>
+  <li class="nav-item" data-depth="0">
+<ul class="nav-list">
+  <li class="nav-item" data-depth="1">
+    <a class="nav-link" href="arquitetura/index.html">Arquitetura</a>
+  </li>
+</ul>
+  </li>
+</ul>
+  </nav>
+</div>
+<div class="nav-panel-explore" data-panel="explore">
+  <div class="context">
+    <span class="title">Documentação do FUJI</span>
+    <span class="version">master</span>
+  </div>
+  <ul class="components">
+    <li class="component">
+      <div class="title"><a href="../artes-marciais-online/index.html">Artes Marciais Online</a></div>
+      <ul class="versions">
+        <li class="version is-latest">
+          <a href="../artes-marciais-online/index.html">master</a>
+        </li>
+      </ul>
+    </li>
+    <li class="component is-current">
+      <div class="title"><a href="index.html">Documentação do FUJI</a></div>
+      <ul class="versions">
+        <li class="version is-current is-latest">
+          <a href="index.html">master</a>
+        </li>
+      </ul>
+    </li>
+  </ul>
+</div>
+    </div>
+  </aside>
+</div>
+<main class="article">
+<div class="toolbar" role="navigation">
+<button class="nav-toggle"></button>
+  <a href="index.html" class="home-link"></a>
+<nav class="breadcrumbs" aria-label="breadcrumbs">
+  <ul>
+    <li><a href="index.html">Documentação do FUJI</a></li>
+    <li>Em estudo ou desenvolvimento</li>
+    <li><a href="autenticacao.html">Novo servidor de autenticação</a></li>
+  </ul>
+</nav>
+<div class="edit-this-page"><a href="file:///work/fuji/modules/ROOT/pages/autenticacao.adoc">Edit this Page</a></div>
+</div>
+  <div class="content">
+<aside class="toc sidebar" data-title="Conteúdo" data-levels="2">
+  <div class="toc-menu"></div>
+</aside>
+<article class="doc">
+<h1 class="page">Novo servidor de autenticação</h1>
+<div class="sect1">
+<h2 id="_arquitetura"><a class="anchor" href="#_arquitetura"></a>Arquitetura</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stretch">
+<colgroup>
+<col style="width: 50%;">
+<col style="width: 50%;">
+</colgroup>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock kroki">
+<div class="content">
+<img src="_images/arquitetura-a367e94293fb183816e87866b66b8aad5c2467e1.svg" alt="Diagrama básico com a entrada da autenticação">
+</div>
+<div class="title">Figura 1. Diagrama básico com a entrada da autenticação</div>
+</div></div></td>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="imageblock kroki">
+<div class="content">
+<img src="_images/arquitetura-futura-f0cd7b08025acec02ee3f5deb5a81165fe35cf6f.svg" alt="Diagrama com vários serviços usando a mesma autenticação">
+</div>
+<div class="title">Figura 2. Diagrama com vários serviços usando a mesma autenticação</div>
+</div></div></td>
+</tr>
+</tbody>
+</table>
+<div class="imageblock kroki">
+<div class="content">
+<img src="_images/sequencia-ab139915bd78b945969be6ae3b158744619c59a5.svg" alt="Digrama de sequência das ações ao acessar o sistema">
+</div>
+<div class="title">Figura 3. Digrama de sequência das ações ao acessar o sistema</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_planejamento"><a class="anchor" href="#_planejamento"></a>Planejamento</h2>
+<div class="sectionbody">
+<div class="sect2">
+<h3 id="_primeira_fase"><a class="anchor" href="#_primeira_fase"></a>Primeira fase</h3>
+<div class="paragraph">
+<p>Basicamente na primeira fase precisamos começar a usar este novo servidor com uma perda mínima de funcionalidade, e mudanças necessárias em telas e fluxo de autenticação.</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Implantação do novo servidor</p>
+</li>
+<li>
+<p>Rotinas de backup de autenticação</p>
+</li>
+<li>
+<p>Migração dos usuários atuais (gestores e professores)</p>
+</li>
+<li>
+<p>Remoção dos usuários de alunos (atualmente sem uso e sem senha válida)</p>
+</li>
+<li>
+<p>Hotsite para a página inicial</p>
+</li>
+<li>
+<p>Tema para o keycloak</p>
+</li>
+<li>
+<p>Recursos atuais a migrar e testar</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Login</p>
+</li>
+<li>
+<p>Logout</p>
+</li>
+<li>
+<p>Mudar senha</p>
+</li>
+<li>
+<p>Recuperar senha</p>
+</li>
+<li>
+<p>Auto-registro</p>
+</li>
+<li>
+<p>Registro manual</p>
+</li>
+</ul>
+</div>
+</li>
+<li>
+<p>Módulo do professor</p>
+</li>
+<li>
+<p>Novos recursos liberados pelo servidor</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Autenticação Google</p>
+</li>
+<li>
+<p>Lembrar do usuário</p>
+</li>
+<li>
+<p>Confirmação de e-mail</p>
+</li>
+<li>
+<p>Edição das mensagens</p>
+</li>
+<li>
+<p>Log de eventos (quem se logou, quando, forçar logout, etc)</p>
+</li>
+<li>
+<p>Troca de senha forçada</p>
+</li>
+<li>
+<p>Ver quem está online</p>
+</li>
+<li>
+<p>Internacionalização</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_segunda_fase"><a class="anchor" href="#_segunda_fase"></a>Segunda fase</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Novo módulo de aluno em interface separada (mais amigável ao responsável ou aluno)</p>
+</li>
+<li>
+<p>Separação da interface de administração: <a href="https://admin.fuji.net.br" class="bare">https://admin.fuji.net.br</a></p>
+</li>
+<li>
+<p>Suporte para reuso do mesmo e-mail em diferentes academias ou perfis</p>
+</li>
+<li>
+<p>Suporte para autenticação em dois fatores</p>
+</li>
+<li>
+<p>Autenticação em outros serviços (Facebook por exemplo)</p>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_terceira_fase"><a class="anchor" href="#_terceira_fase"></a>Terceira fase</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Novas permissões e perfis</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Secretárias</p>
+</li>
+<li>
+<p>Múltiplos gestores</p>
+</li>
+<li>
+<p>Gestor/Professor</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+<div class="sect2">
+<h3 id="_quarta_fase"><a class="anchor" href="#_quarta_fase"></a>Quarta fase</h3>
+<div class="ulist">
+<ul>
+<li>
+<p>Autenticar outros produtos da ENJ</p>
+<div class="ulist">
+<ul>
+<li>
+<p>Artes marciais online</p>
+</li>
+<li>
+<p>Cursos</p>
+</li>
+<li>
+<p>Avaliar serviços como venda de material didático</p>
+</li>
+</ul>
+</div>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_orçamento"><a class="anchor" href="#_orçamento"></a>Orçamento</h2>
+<div class="sectionbody">
+<table class="tableblock frame-all grid-all stripes-even stretch">
+<caption class="title">Tabela 1. Primeira fase</caption>
+<colgroup>
+<col style="width: 75%;">
+<col style="width: 25%;">
+</colgroup>
+<thead>
+<tr>
+<th class="tableblock halign-left valign-top">Tarefa</th>
+<th class="tableblock halign-right valign-top">Orçamento</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Novo serviço, configuração, estudos, avaliações e prospecções do auth.fuji.net.br</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">18h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Backup</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">4h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Migração dos usuários (gestores e professores)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">8h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Remoção dos usuários dos alunos (atuais)</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">6h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Hotsite para a página inicial do fuji.net.br <sup class="footnote" id="_footnote_designer">[<a id="_footnoteref_1" class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">4h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Tema para o auth.fuji.net.br <sup class="footnoteref">[<a class="footnote" href="#_footnotedef_1" title="View footnote.">1</a>]</sup></p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">4h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><div class="content"><div class="paragraph">
+<p>Recursos atuais a migrar e testar (login, logout, auto-registro, mudar senha, registro manual e recuperar senha)</p>
+</div></div></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">12h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Módulo do professor</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">10h</p></td>
+</tr>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Autenticação do Google</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">4h</p></td>
+</tr>
+</tbody>
+<tfoot>
+<tr>
+<td class="tableblock halign-left valign-top"><p class="tableblock">Total</p></td>
+<td class="tableblock halign-right valign-top"><p class="tableblock">70h</p></td>
+</tr>
+</tfoot>
+</table>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Importante"></i>
+</td>
+<td class="content">
+Conforme combinado 10h serão cobradas de qualquer maneira referente a todo trabalho de pesquisa e testes já realizados até aqui. Uma vez cobradas essas horas serão abatidas do total acima.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="papeis"><a class="anchor" href="#papeis"></a>Papéis</h2>
+<div class="sectionbody">
+<div class="paragraph">
+<p>No fuji até a versão 3.x tínhamos pápeis montados apenas em grupos, eram eles:</p>
+</div>
+<div class="ulist">
+<ul>
+<li>
+<p>Administrador</p>
+</li>
+<li>
+<p>Gestor</p>
+</li>
+<li>
+<p>Professor</p>
+</li>
+<li>
+<p>Aluno (sem interface até o momento)</p>
+</li>
+</ul>
+</div>
+<div class="paragraph">
+<p>De agora em diante precisaremos flexibilizar e detalhar melhor essas regras e pápeis, eles podem ser revisitados a qualquer momento, mais isso poderá gerar novos custos (mesmo que baixos). Neste momento o ideal é que já possamos montar algo mais robusto (mesmo que ainda) sem uso&#8230;&#8203;</p>
+</div>
+<div class="paragraph">
+<p>Segue abaixo uma pequena lista de sugestões e peço que vocês elaborem mais&#8230;&#8203;</p>
+</div>
+<div id="diagrama-papeis" class="imageblock kroki">
+<div class="content">
+<img src="_images/roles-e62ca8c5c94bbd4a9d28ae027e36f7d046134462.svg" alt="Papéis para o grupo atual de gestores">
+</div>
+<div class="title">Figura 4. Papéis para o grupo atual de gestores</div>
+</div>
+<div class="paragraph">
+<p>No <a href="#diagrama-papeis">Papéis para o grupo atual de gestores</a>, temos o papel <strong>gestor</strong>, que terá todos os direitos que foram listados, mas um usuário que tenha apenas <strong>gestor-financeiro</strong> terá todos os direitos na tela de título, e um outro que tenha apenas o papel <strong>registrar-pagamento</strong>, só poderá fazer isso mesmo.</p>
+</div>
+<div class="admonitionblock important">
+<table>
+<tr>
+<td class="icon">
+<i class="fa icon-important" title="Importante"></i>
+</td>
+<td class="content">
+Durante o desenvolvimento eu mesmo devo perceber e sugerir novos pápeis, porém nem sempre isso é claro para mim, vocês entendendo melhor a necessidade do cliente podem antever mais essas necessidades.
+</td>
+</tr>
+</table>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_próximos_passos"><a class="anchor" href="#_próximos_passos"></a>Próximos passos</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Gerencianet → OpenID</p>
+</li>
+<li>
+<p>Consultar Daniel &#8594; HotSite</p>
+</li>
+<li>
+<p>UX</p>
+</li>
+<li>
+<p>Artes marciais online poder consultar o FUJI</p>
+</li>
+<li>
+<p>Material didático suportar autenticação centralizada</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="sect1">
+<h2 id="_preparação_de_ambiente"><a class="anchor" href="#_preparação_de_ambiente"></a>Preparação de ambiente</h2>
+<div class="sectionbody">
+<div class="ulist">
+<ul>
+<li>
+<p>Criação do realm</p>
+</li>
+<li>
+<p>Criação do client para backend</p>
+</li>
+<li>
+<p>Criação do client para web</p>
+</li>
+<li>
+<p>Configuração do backend (Keycloak com secret)</p>
+</li>
+<li>
+<p>Configuração do frontend (conf.json no gitops)</p>
+</li>
+<li>
+<p>Configurar E-mail</p>
+</li>
+<li>
+<p>Criar conta create_user</p>
+</li>
+<li>
+<p>Habilitar internacionalização (temas)</p>
+</li>
+<li>
+<p>associação com o google: <a href="https://console.cloud.google.com/apis/credentials" class="bare">https://console.cloud.google.com/apis/credentials</a></p>
+</li>
+<li>
+<p>Migração de contas (atualizando o UUID no banco)</p>
+</li>
+<li>
+<p>Configurar para capturar eventos</p>
+</li>
+<li>
+<p>Error: tela em branco quando não acha o uuid</p>
+</li>
+<li>
+<p>Problemas com o uso da internacionalização&#8230;&#8203;</p>
+</li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footnotes">
+<hr>
+<div class="footnote" id="_footnotedef_1">
+<a href="#_footnoteref_1">1</a>. O orçamento destes itens cobre apenas o tempo necessário para aplicar os temas, ajustes, etc. Possível contratação de designer extra com orçamento a parte.
+</div>
+</div>
+<nav class="pagination">
+  <span class="prev"><a href="pix.html">PIX</a></span>
+  <span class="next"><a href="referencias-desenvolvimento.html">Referências de Desenvolvimento</a></span>
+</nav>
+</article>
+  </div>
+</main>
+</div>
+<footer class="footer">
+  <p>This page was built using the Antora default UI.</p>
+  <p>The source code for this UI is licensed under the terms of the MPL-2.0 license.</p>
+</footer>
+<script id="site-script" src="../_/js/site.js" data-ui-root-path="../_"></script>
+<script async src="../_/js/vendor/highlight.js"></script>
+<script src="../_/js/vendor/lunr.js"></script>
+<script src="../_/js/vendor/lunr-languages.js"></script>
+<script src="../_/js/search-ui.js" id="search-ui-script" data-site-root-path=".." data-snippet-length="100" data-stylesheet="../_/css/search.css"></script>
+<script async src="../search-index.js"></script>
+  </body>
+</html>
